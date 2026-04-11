@@ -12,6 +12,11 @@ A TTRPG simulator built from the ground up in Unreal Engine 5.7 and C++. Feature
 
 ---
 
+## [Frogdoku](/projects/frogdoku/) — *(Released October 2025)*
+A cozy 3D grid-based puzzle game published on Steam by Digital Scorpion Interactive. I built the save, control binding, level timer, credits, and level select systems, as well as an in-game bug reporting tool.
+
+---
+
 ## [Tales of Valoris: Swallow's Defenders](/projects/tales-of-valoris/) — *(Released January 2025)*
 A fantasy tower defense game published on Steam by Digital Scorpion Interactive. I built the Endless Mode systems, save/load system, bug report system, and Steam achievements, and served as QA Lead for the project.
 
