@@ -39,3 +39,8 @@ A C# implementation of Conway's Game of Life, built as a Full Sail course assign
 
 ## [Terrain Generator](/projects/terrain-generator/) — *(2022)*
 A procedural terrain generator built in Unreal Engine using Perlin noise as an introductory assignment at Full Sail University.
+
+---
+
+## [Random Name Generator](/projects/name-generator/) — *(Active)*
+A C# machine learning project that analyzes a list of names and generates new ones that fit the same stylistic pattern. A personal exploration of ML applied to a game dev problem.
