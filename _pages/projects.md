@@ -17,8 +17,8 @@ A fantasy tower defense game published on Steam by Digital Scorpion Interactive.
 
 ---
 
-## [Hit N' Bit](/projects/hit-n-bit/) — *(2024)*
-Coming soon.
+## [Hit n' Bit](/projects/hit-n-bit/) — *(Demo, In Development)*
+A dark fantasy Metroidvania platformer by Digital Scorpion Interactive. I built the save system, controls, and scene manager, contributed to a range of other systems, and served as QA Lead for the demo.
 
 ---
 
