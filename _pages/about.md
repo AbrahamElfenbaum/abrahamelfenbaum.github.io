@@ -7,7 +7,9 @@ I'm Abraham Elfenbaum, a game developer and CS graduate from Full Sail Universit
 
 I'm drawn to the systems side of game development — the logic underneath the experience. I find the most satisfaction in building things that feel right to interact with, whether that's a physics simulation, a UI system, or a piece of game logic that holds up under edge cases.
 
-My current focus is **Project Iron Table**, a TTRPG simulator built in Unreal Engine 5.7 with C++. It started as a dice roller and has grown into a full session management tool with a physics-based dice system, tabbed chat with private channels, draggable UI panels, and persistent camera settings.
+I currently work as a software developer at Digital Scorpion Interactive, where I've shipped two titles — *Tales of Valoris: Swallow's Defenders* and *Frogdoku* — and contributed to the *Hit n' Bit* demo.
+
+My current personal focus is **Project Iron Table**, a TTRPG simulator built in Unreal Engine 5.7 with C++. It started as a dice roller and has grown into a full session management tool with a physics-based dice system, tabbed chat with private channels, draggable UI panels, and persistent camera settings.
 
 I'm actively looking for roles in game development or software engineering. Feel free to reach out.
 
