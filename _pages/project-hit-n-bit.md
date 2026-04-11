@@ -3,7 +3,7 @@ permalink: /projects/hit-n-bit/
 title: "Hit n' Bit"
 ---
 
-**Studio:** Digital Scorpion Interactive &nbsp;|&nbsp; **Platform:** PC &nbsp;|&nbsp; **Status:** Demo available on Steam
+**Studio:** Digital Scorpion Interactive &nbsp;|&nbsp; **Platform:** PC &nbsp;|&nbsp; **Status:** Demo released on Steam; full game on indefinite hold
 
 [View on Steam](https://store.steampowered.com/app/2366690/Hit_n_Bit/){: .btn .btn--primary}
 
