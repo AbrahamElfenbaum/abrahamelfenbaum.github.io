@@ -22,20 +22,20 @@ A dark fantasy Metroidvania platformer by Digital Scorpion Interactive. I built 
 
 ---
 
-## [SpellCraft](/projects/spellcraft/) — *(2022)*
-Coming soon.
+## [SpellCraft](/projects/spellcraft/) — *(2021)*
+A Unity/C# midterm project at Full Sail University. I built the player controls, abilities, HUD, and character animations.
 
 ---
 
-## [White And Black](/projects/white-and-black/) — *(2022)*
-Coming soon.
+## [White and Black](/projects/white-and-black/) — *(2022)*
+A sandbox god simulator built in Unreal Engine 5 with C++ as my Full Sail capstone. I implemented the UI system, building placement, spell system, and audio across a four-person team.
 
 ---
 
 ## [Game of Life](/projects/game-of-life/) — *(2022)*
-Coming soon.
+A C# implementation of Conway's Game of Life, built as a Full Sail course assignment.
 
 ---
 
 ## [Terrain Generator](/projects/terrain-generator/) — *(2022)*
-Coming soon.
+A procedural terrain generator built in Unreal Engine using Perlin noise as an introductory assignment at Full Sail University.
