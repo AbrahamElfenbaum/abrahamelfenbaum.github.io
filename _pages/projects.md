@@ -12,7 +12,7 @@ A TTRPG simulator built from the ground up in Unreal Engine 5.7 and C++. Feature
 
 ---
 
-## [Random Name Generator](/projects/name-generator/) — C# *(2025)*
+## [Random Name Generator](/projects/name-generator/) — C# *(2026)*
 A C# machine learning project that analyzes a list of names and generates new ones that fit the same stylistic pattern. A personal exploration of ML applied to a game dev problem.
 
 ---
@@ -53,6 +53,8 @@ A C# implementation of Conway's Game of Life, built as a Full Sail course assign
 ---
 
 ## Future Projects
+
+These are ideas for projects that have been floating around in my head.
 
 ## Name Generator v2 — C#
 An upgrade/rework of the name generator I made. The current version reads and records patterns of letters and then generates a series of random letters based on the recorded results. I would like to see what a shift from pattern recognition to analysis would look like and how that would change the results of the output.
