@@ -43,7 +43,7 @@ A procedural terrain generator built in Unreal Engine using Perlin noise as an i
 ---
 
 ## [SpellCraft](/projects/spellcraft/) — Unity Engine / C# *(2021)*
-A Unity/C# midterm project at Full Sail University. I built the player controls, abilities, HUD, and character animations accross a five-person team.
+A Unity/C# midterm project at Full Sail University. I built the player controls, abilities, HUD, and character animations across a five-person team.
 
 ---
 
