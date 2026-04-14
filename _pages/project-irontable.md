@@ -31,6 +31,8 @@ A tabbed chat widget supports multiple channels — including a persistent Serve
 - Notification indicators on tabs with unread messages
 - A collapsible closed-channel panel for reopening conversations
 - Incoming messages automatically reopen closed channels
+- Right-click context menu on tabs for inline rename and close, with rename persisted across sessions
+- Full chat log persistence — all messages and tab names are restored on session reload
 
 ### Draggable Panels & HUD
 The gameplay HUD is component-driven and spawned on local clients only. Each panel (dice, chat, players) is draggable and resizable within the viewport. A taskbar manages panel visibility toggling.
