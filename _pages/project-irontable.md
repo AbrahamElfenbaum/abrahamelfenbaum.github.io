@@ -40,6 +40,13 @@ The gameplay HUD is component-driven and spawned on local clients only. Each pan
 ### Camera Settings with Save/Load
 Camera behavior (speed, pitch limits, zoom range) is configurable via a settings UI built with paired sliders and editable text fields. Settings persist between sessions using Unreal's `USaveGame` system.
 
+### Custom Rich-Text Editor (In Progress)
+A WYSIWYG rich-text notes editor built as a native Slate widget — no browser, no external libraries. Key architectural decisions:
+- **Run-length document model** — text stored as an ordered list of `FRichTextRun` structs, each holding a character range and its formatting flags (bold, italic, underline, strikethrough)
+- **Format-aware insertion** — typing at the boundary between two differently-formatted runs splits the run into three pieces (Left, Middle, Right), with the Middle inheriting `ActiveFormat`
+- **Cursor-driven format sync** — `SyncActiveFormat` updates the toolbar checkboxes whenever the cursor moves, so the UI always reflects the format under the cursor
+- Rendering handled manually via `FSlateDrawElement::MakeText` and `MakeLines`; tab stops and multi-line layout computed by walking runs and measuring with `FSlateFontMeasure`
+
 ---
 
 ## Technical Highlights
@@ -48,3 +55,4 @@ Camera behavior (speed, pitch limits, zoom range) is configurable via a settings
 - Modular folder structure with cross-folder includes managed via `Build.cs`
 - Server RPCs handle chat routing; private messages are directed per-recipient
 - Input mode management ensures UI widgets receive mouse events without blocking gameplay input
+- Custom Slate rich-text editor built from scratch: run-length document model, format-aware run-splitting, DPI-aware text measurement
