@@ -45,6 +45,7 @@ A WYSIWYG rich-text notes editor built as a native Slate widget — no browser, 
 - **Run-length document model** — text stored as an ordered list of `FRichTextRun` structs, each holding a character range and its formatting flags (bold, italic, underline, strikethrough)
 - **Format-aware insertion** — typing at the boundary between two differently-formatted runs splits the run into three pieces (Left, Middle, Right), with the Middle inheriting `ActiveFormat`
 - **Cursor-driven format sync** — `SyncActiveFormat` updates the toolbar checkboxes whenever the cursor moves, so the UI always reflects the format under the cursor
+- **Per-run visual rendering** — `OnPaint` iterates runs, swapping `FSlateFontInfo::TypefaceFontName` for bold/italic variants; underline and strikethrough drawn as line primitives via `FSlateDrawElement::MakeLines`; trailing whitespace trimmed before measuring decoration width
 - Rendering handled manually via `FSlateDrawElement::MakeText` and `MakeLines`; tab stops and multi-line layout computed by walking runs and measuring with `FSlateFontMeasure`
 
 ---
@@ -55,4 +56,4 @@ A WYSIWYG rich-text notes editor built as a native Slate widget — no browser, 
 - Modular folder structure with cross-folder includes managed via `Build.cs`
 - Server RPCs handle chat routing; private messages are directed per-recipient
 - Input mode management ensures UI widgets receive mouse events without blocking gameplay input
-- Custom Slate rich-text editor built from scratch: run-length document model, format-aware run-splitting, DPI-aware text measurement
+- Custom Slate rich-text editor built from scratch: run-length document model, format-aware run-splitting, per-run visual rendering (bold/italic/underline/strikethrough), DPI-aware text measurement
