@@ -46,6 +46,10 @@ A WYSIWYG rich-text notes editor built as a native Slate widget — no browser, 
 - **Format-aware insertion** — typing at the boundary between two differently-formatted runs splits the run into three pieces (Left, Middle, Right), with the Middle inheriting `ActiveFormat`
 - **Cursor-driven format sync** — `SyncActiveFormat` updates the toolbar checkboxes whenever the cursor moves, so the UI always reflects the format under the cursor
 - **Per-run visual rendering** — `OnPaint` iterates runs, swapping `FSlateFontInfo::TypefaceFontName` for bold/italic variants; underline and strikethrough drawn as line primitives via `FSlateDrawElement::MakeLines`; trailing whitespace trimmed before measuring decoration width
+- **Full selection model** — fixed-anchor + moving-cursor design; mouse drag, Shift+Arrow, Ctrl+A; per-line highlight rects rendered by the leaf widget; selection-aware backspace, delete, and typing all call a `RangeDelete()` helper before operating
+- **Clipboard operations** — Ctrl+C/X copy selected runs (with text clipped to selection boundaries); Ctrl+V inserts the run array at the cursor with an optional selection replace
+- **Format-to-selection** — `FormatToSelection(TFunction<void(FRichTextRun&)>)` splits runs at both selection boundaries, applies a caller-supplied lambda to each covered run, and merges adjacent same-format runs; called by all four toggle methods and Ctrl+B/I/U/S shortcuts
+- **Column drift prevention** — `PreferredX` captures the cursor's X pixel position on the first Up/Down press and reuses it across consecutive vertical moves, preventing accumulated drift from floating-point measurement variance
 - Rendering handled manually via `FSlateDrawElement::MakeText` and `MakeLines`; tab stops and multi-line layout computed by walking runs and measuring with `FSlateFontMeasure`
 
 ---
@@ -56,4 +60,4 @@ A WYSIWYG rich-text notes editor built as a native Slate widget — no browser, 
 - Modular folder structure with cross-folder includes managed via `Build.cs`
 - Server RPCs handle chat routing; private messages are directed per-recipient
 - Input mode management ensures UI widgets receive mouse events without blocking gameplay input
-- Custom Slate rich-text editor built from scratch: run-length document model, format-aware run-splitting, per-run visual rendering (bold/italic/underline/strikethrough), DPI-aware text measurement
+- Custom Slate rich-text editor built from scratch: run-length document model, format-aware run-splitting, full selection system (mouse drag, Shift+Arrow, Ctrl+A/C/X/V), format-to-selection with run boundary splitting, per-run visual rendering (bold/italic/underline/strikethrough), DPI-aware text measurement
