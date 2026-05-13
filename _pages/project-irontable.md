@@ -50,6 +50,7 @@ A WYSIWYG rich-text notes editor built as a native Slate widget — no browser, 
 - **Clipboard operations** — Ctrl+C/X copy selected runs (with text clipped to selection boundaries); Ctrl+V inserts the run array at the cursor with an optional selection replace
 - **Format-to-selection** — `FormatToSelection(TFunction<void(FRichTextRun&)>)` splits runs at both selection boundaries, applies a caller-supplied lambda to each covered run, and merges adjacent same-format runs; called by all four toggle methods and Ctrl+B/I/U/S shortcuts
 - **Column drift prevention** — `PreferredX` captures the cursor's X pixel position on the first Up/Down press and reuses it across consecutive vertical moves, preventing accumulated drift from floating-point measurement variance
+- **Word wrap** — a pre-pass (`RebuildVisualLines`) walks the document character by character to build `VisualLines` (a list of `[StartIndex, EndIndex)` ranges into the full text), handling hard newlines, tab overflow, and space-boundary word wrap with backtracking; `OnPaint` iterates visual lines and clips each overlapping run to the line's range; `GetCursorPosition`, `HitTest`, and Up/Down navigation all operate in visual-line space
 - Rendering handled manually via `FSlateDrawElement::MakeText` and `MakeLines`; tab stops and multi-line layout computed by walking runs and measuring with `FSlateFontMeasure`
 
 ---
