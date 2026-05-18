@@ -3,7 +3,7 @@ permalink: /about/
 title: "About"
 ---
 
-I'm Abraham Elfenbaum, a game developer and CS graduate from Full Sail University (B.S. Game Development, 2022).
+I'm Abraham Elfenbaum, a systems and UI programmer and CS graduate from Full Sail University (B.S. Game Development, 2022).
 
 I'm drawn to the systems side of game development — the logic underneath the experience. I find the most satisfaction in building things that feel right to interact with, whether that's a physics simulation, a UI system, or a piece of game logic that holds up under edge cases.
 
@@ -13,6 +13,7 @@ My current personal focus is **Project Iron Table**, a TTRPG simulator built in 
 
 I'm actively looking for roles in game development or software engineering. Feel free to reach out.
 
-- **Email:** a.elfenbaum@gmail.com
+- **Email:** [a.elfenbaum@gmail.com](mailto:a.elfenbaum@gmail.com)
 - **GitHub:** [AbrahamElfenbaum](https://github.com/AbrahamElfenbaum)
 - **LinkedIn:** [abraham-elfenbaum](https://www.linkedin.com/in/abraham-elfenbaum-114ab1111)
+- **Resume:** [Download]({{ site.baseurl }}/assets/files/resume.pdf)
