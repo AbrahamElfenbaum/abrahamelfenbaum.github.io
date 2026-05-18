@@ -69,6 +69,9 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:a.elfenbaum@gmail.com"
+    - label: "Resume"
+      icon: "fas fa-fw fa-file-pdf"
+      url: "/assets/files/resume.pdf"
 
 footer:
   links:
@@ -81,6 +84,9 @@ footer:
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:a.elfenbaum@gmail.com"
+    - label: "Resume"
+      icon: "fas fa-fw fa-file-pdf"
+      url: "/assets/files/resume.pdf"
 
 defaults:
   # _posts
