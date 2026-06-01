@@ -22,12 +22,12 @@ The project is built incrementally, starting with a fully-featured dice system a
 ### Physics-Based Dice Rolling
 Dice are fully simulated using Unreal's physics engine. Each die type (D4, D20, D100, etc.) is its own actor with configurable mass, damping, impulse range, and physical material. A failsafe timer destroys dice that fail to settle, and a delegate broadcasts the final result when all dice come to rest.
 
+### Dice Selector UI
+A widget-based UI lets players choose die type and count, then roll with a single button. All logic lives in C++; Blueprint handles only layout and styling.
+
 <video width="100%" controls>
   <source src="/assets/videos/irontable/DiceRollingVideo.mp4" type="video/mp4">
 </video>
-
-### Dice Selector UI
-A widget-based UI lets players choose die type and count, then roll with a single button. All logic lives in C++; Blueprint handles only layout and styling.
 
 ### Chat System
 A tabbed chat widget supports multiple channels — including a persistent Server channel and closeable private channels. Features include:
