@@ -22,6 +22,10 @@ The project is built incrementally, starting with a fully-featured dice system a
 ### Physics-Based Dice Rolling
 Dice are fully simulated using Unreal's physics engine. Each die type (D4, D20, D100, etc.) is its own actor with configurable mass, damping, impulse range, and physical material. A failsafe timer destroys dice that fail to settle, and a delegate broadcasts the final result when all dice come to rest.
 
+<video width="100%" controls>
+  <source src="/assets/videos/irontable/DiceRollingVideo.mp4" type="video/mp4">
+</video>
+
 ### Dice Selector UI
 A widget-based UI lets players choose die type and count, then roll with a single button. All logic lives in C++; Blueprint handles only layout and styling.
 
@@ -34,8 +38,14 @@ A tabbed chat widget supports multiple channels — including a persistent Serve
 - Right-click context menu on tabs for inline rename and close, with rename persisted across sessions
 - Full chat log persistence — all messages and tab names are restored on session reload
 
+{% include figure image_path="/assets/images/irontable/ChatScreenShot.png" alt="Chat system showing multiple tabs, notification indicators, and right-click context menu" %}
+
 ### Draggable Panels & HUD
 The gameplay HUD is component-driven and spawned on local clients only. Each panel (dice, chat, players) is draggable and resizable within the viewport. A taskbar manages panel visibility toggling.
+
+<video width="100%" controls>
+  <source src="/assets/videos/irontable/DraggingPanelsVideos.mp4" type="video/mp4">
+</video>
 
 ### Camera Settings with Save/Load
 Camera behavior (speed, pitch limits, zoom range) is configurable via a settings UI built with paired sliders and editable text fields. Settings persist between sessions using Unreal's `USaveGame` system.
@@ -52,6 +62,8 @@ A WYSIWYG rich-text notes editor built as a native Slate widget — no browser, 
 - **Column drift prevention** — `PreferredX` captures the cursor's X pixel position on the first Up/Down press and reuses it across consecutive vertical moves, preventing accumulated drift from floating-point measurement variance
 - **Word wrap** — a pre-pass (`RebuildVisualLines`) walks the document character by character to build `VisualLines` (a list of `[StartIndex, EndIndex)` ranges into the full text), handling hard newlines, tab overflow, and space-boundary word wrap with backtracking; `OnPaint` iterates visual lines and clips each overlapping run to the line's range; `GetCursorPosition`, `HitTest`, and Up/Down navigation all operate in visual-line space
 - Rendering handled manually via `FSlateDrawElement::MakeText` and `MakeLines`; tab stops and multi-line layout computed by walking runs and measuring with `FSlateFontMeasure`
+
+{% include figure image_path="/assets/images/irontable/RichTextScreenShot.png" alt="Rich text editor showing mixed bold, italic, and underline formatting with font controls" %}
 
 ---
 
